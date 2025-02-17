@@ -1,38 +1,69 @@
 *{
     margin: 0;
-    padding: 0;
+    padding-inline: 0;
     box-sizing: border-box;
 }
-.container{
+body{
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items:flex-start;
+    overflow: hidden;
+    margin:auto 0;
 }
 .ball{
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     background-color: blue;
-    position: absolute;
-    animation: bounce 1s infinite alternate;
+    position: relative;
+    animation: bounce 3s ease-in-out forwards, changeColor 3s ease-in-out forwards;
 }
 @keyframes bounce {
    
     0%{
+    top: 0;
+    }
+    30%{
         top: 80%;
-        transform: translate(0, -200%);
     }
-    
+    50%{
+        top: 40%;  
+    }
+    70%{
+        top: 90%;
+    }
+    80%{
+        top: 60%;
+    }
+    90%{
+        top: 95%;
+    }
     100%{
-        top: 10%;
-        transform: translate(0, 0);
+        top: 80%;
     }
-    
-    from{
-        transform: translateY(0);
+   
+}
+@keyframes changeColor {
+    0%{
+        background-color: blue;
     }
-    to{
-        transform: translateY(-100px);
+    30%{
+        background-color: red;
+    }
+    50%{
+        background-color: yellow;
+    }
+    70%{
+        background-color: green;
+    }
+    80%{
+        background-color: purple;
+    }
+    90%{
+        background-color: orange;
+    }
+    100%{
+        background-color: blue;
     }
 }

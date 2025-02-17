@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    box-sizing: border-box;
+}
+:root{
+    --card-height: 200px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+   
+}
+.flip-card{
+    border: 1px solid #000;
+    width: calc(200px* 2/3);
+    height: var(--card-height);
+    border-radius: 5px;
+    display: grid;
+    padding: .5em;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+}
+.bottom{
+    transform: rotate(180deg);
+    
+}
+.top> div:first-child,
+.bottom> div:last-child{
+    padding: 2px;
+}
+.flip-card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0,255,255,0.5);
+    transform: rotate(180deg);
+}
+
+
+
+
+
+  
+
